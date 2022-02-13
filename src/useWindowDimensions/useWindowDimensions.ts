@@ -10,7 +10,7 @@ const useWindowDimensions = (): Props => {
     const [ height, setHeight ] = useState(window.innerHeight)
 
     useEffect(() => {
-        const getWindowDimensions = (): void => {
+        const getWindowDimensions = () => {
             setWidth(window.innerWidth)
             setHeight(window.innerHeight)
         }

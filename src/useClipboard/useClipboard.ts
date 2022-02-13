@@ -1,7 +1,9 @@
 import { useState } from 'react'
 
+type State = string | null
+
 const useClipboard = () => {
-    const [ clipboard, setClipboard ] = useState<string | null>(null)
+    const [ clipboard, setClipboard ] = useState<State>(null)
 
     const copy = async (text: string): Promise<boolean> => {
         try {
