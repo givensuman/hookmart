@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react'
 
-type Event = GlobalEventHandlersEventMap | WindowEventMap | HTMLElementEventMap 
-
 const useEventListener = (
-        event: Event, 
-        callback: (e?: object) => void, 
+        eventType: Event['type'], 
+        callback: (e?: Event) => void, 
         target: any = window
 ) => {
     const savedCallback = useRef(callback)
@@ -14,10 +12,10 @@ const useEventListener = (
     useEffect(() => {
         if (!target.addEventListener) return
 
-        const listener = (e?: object) => savedCallback.current(e)
+        const listener = (e: Event) => savedCallback.current(e)
 
-        target.addEventListener(event, listener)
-        return () => target.removeEventListener(event, listener)
+        target.addEventListener(eventType, listener)
+        return () => target.removeEventListener(eventType, listener)
     })
 }
 
