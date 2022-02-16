@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const useHover = (
-    target: any,
+    target: HTMLElement,
     mouseOverCallback?: () => void,
     mouseOutCallback?: () => void
 ) => {

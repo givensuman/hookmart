@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 const useEventListener = (
         eventType: Event['type'], 
         callback: (e?: Event) => void, 
-        target: any = window
+        target: HTMLElement | Window = window
 ) => {
     const savedCallback = useRef(callback)
 
