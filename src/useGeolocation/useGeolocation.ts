@@ -5,6 +5,7 @@ const useGeolocation = (options: any = {}) => {
 
     if (!navigator.geolocation) {
         console.error("Geolocation isn't supported.")
+        return
     }
 
     useEffect(() => {

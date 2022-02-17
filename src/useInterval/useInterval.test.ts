@@ -1,4 +1,4 @@
-import { cleanup, renderHook} from '@testing-library/react-hooks'
+import {  cleanup, renderHook} from '@testing-library/react-hooks'
 import useInterval from '.'
 
 describe('useInterval', () => {
@@ -26,7 +26,7 @@ describe('useInterval', () => {
     test('should fire callback again', async () => {
         renderHook(() => useInterval(e, delay))
 
-        await sleep (250)
+        await sleep(250)
 
         expect(e).toHaveBeenCalledTimes(2)
         cleanup()
