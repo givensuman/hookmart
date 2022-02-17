@@ -7,12 +7,10 @@ const useLocalStorage = (
     const [ stored, setStored ] = useState(() => {
         try {
             const item = window.localStorage.getItem(key)
-            if (item !== null && item !== undefined) {
-                console.log('item', item)
+            if (item) {
                 return JSON.parse(item)
             } else {
                 window.localStorage.setItem(key, JSON.stringify(initial))
-                console.log('init', initial)
                 return initial
             }
         }

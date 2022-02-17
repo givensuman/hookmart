@@ -23,4 +23,13 @@ describe('useInterval', () => {
         cleanup()
     })
 
+    test('should fire callback again', async () => {
+        renderHook(() => useInterval(e, delay))
+
+        await sleep (250)
+
+        expect(e).toHaveBeenCalledTimes(2)
+        cleanup()
+    })
+
 })

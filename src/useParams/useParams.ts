@@ -3,12 +3,16 @@ import { useState, useEffect } from "react"
 type State = object | null
 
 const useParams = (
-    url: string = window.location.search
+    url?: string
 ) => {
     const [ params, setParams ] = useState<State>(null)
 
-    useEffect(() => setParams(new URLSearchParams(url)), [url])
-
+    useEffect(() => {
+        let query: string = url ? new URL(url).search : window.location.search
+        const URLparams = new URLSearchParams(query)
+        setParams(Object.fromEntries(URLparams))
+    }, [url])
+    
     return params
 }
 

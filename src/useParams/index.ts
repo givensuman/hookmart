@@ -1,1 +1,2 @@
-export * from './useParams'
+import useParams from './useParams'
+export default useParams

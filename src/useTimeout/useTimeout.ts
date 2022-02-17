@@ -9,9 +9,9 @@ const useTimeout = (
     useEffect(() => savedCallback.current = callback, [callback])
 
     useEffect(() => {
-        const timeout = setTimeout(() => savedCallback.current, delay)
+        const timeout = setTimeout(() => savedCallback.current(), delay)
         return () => clearTimeout(timeout)
-    })
+    }, [delay])
 }
 
 export default useTimeout

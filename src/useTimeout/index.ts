@@ -1,1 +1,2 @@
-export * from './useTimeout'
+import useTimeout from './useTimeout'
+export default useTimeout

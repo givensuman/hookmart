@@ -3,6 +3,11 @@ import useLocalStorage from '.'
 
 describe('useLocalStorage', () => {
 
+    afterEach(() => {
+        jest.resetAllMocks()
+        localStorage.clear()
+    })
+
     test('should render', () => {
         renderHook(() => useLocalStorage('some string'))
         cleanup()
@@ -10,8 +15,8 @@ describe('useLocalStorage', () => {
 
     test('should receive input state', () => {
         const { result } = renderHook(() => useLocalStorage('some string', 'some value'))
-
-        expect(result[0]).toBe('some value')
+        
+        expect(result.current[0]).toBe('some value')
         cleanup()
     })
 

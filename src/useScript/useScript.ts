@@ -21,8 +21,9 @@ const useScript = (
         })
     
         const handleLoad = () => setLoading(false)
-    
         el.addEventListener('load', handleLoad)
+        
+        document.body.appendChild(el)
         return () => el.removeEventListener('load', handleLoad)
     }, [src])
 
