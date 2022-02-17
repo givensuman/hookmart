@@ -18,28 +18,27 @@ yarn add hookmart
 ### Contents:
 
 - <a href='#useBoolean'>`useBoolean`</a>
-<br>
+
 - <a href='#useClipboard'>`useClipboard`</a>
-<br>
+
 - <a href='#useEventListener'>`useEventListener`</a>
-<br>
+
 - <a href='#useGeolocation'>`useGeolocation`</a>
-<br>
+
 - <a href='#useHover'>`useHover`</a>
-<br>
-- <a href='#useInterval'>`useInterval`</a>
-<br>
+
 - <a href='#useLocalStorage'>`useLocalStorage`</a>
-<br>
+
 - <a href='#useOrientation'>`useOrientation`</a>
-<br>
+
 - <a href='#useParams'>`useParams`</a>
-<br>
+
 - <a href='#useScript'>`useScript`</a>
-<br>
+
 - <a href='#useTimeout'>`useTimeout`</a>
-<br>
+
 - <a href='#useWindowDimensions'>`useWindowDimensions`</a>
+  
 </ol>
 
 
@@ -112,7 +111,7 @@ const CopyMe = () => {
 
 ### useEventListener
 
-Attaches the supplied callback to the supplied target with the supplied event trigger. If no target is supplied, it defaults to `window`. Fairly standard JavaScript, but useful as it contains state checking and cleanup.
+Attaches the supplied event trigger and callback to the supplied target. If no target is supplied, it defaults to `window`. Fairly standard JavaScript, but useful as it contains state checking and cleanup.
 
 Example usage:
 
