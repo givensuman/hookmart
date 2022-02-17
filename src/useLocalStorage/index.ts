@@ -1,1 +1,2 @@
-export * from './useLocalStorage'
+import useLocalStorage from './useLocalStorage'
+export default useLocalStorage

@@ -7,10 +7,12 @@ const useLocalStorage = (
     const [ stored, setStored ] = useState(() => {
         try {
             const item = window.localStorage.getItem(key)
-            if (item) {
+            if (item !== null && item !== undefined) {
+                console.log('item', item)
                 return JSON.parse(item)
             } else {
                 window.localStorage.setItem(key, JSON.stringify(initial))
+                console.log('init', initial)
                 return initial
             }
         }
@@ -30,7 +32,7 @@ const useLocalStorage = (
         }
     }
 
-    return [ stored, setValue ]
+    return [ stored, setValue ] as const
 }
 
 export default useLocalStorage
