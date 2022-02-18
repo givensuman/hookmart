@@ -1,5 +1,5 @@
 import { cleanup, renderHook } from '@testing-library/react-hooks'
-import useOrientation from '.'
+import useOrientation from './useOrientation'
 
 describe('useOrientation', () => {
 

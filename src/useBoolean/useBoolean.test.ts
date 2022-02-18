@@ -1,5 +1,5 @@
 import { act, cleanup, renderHook } from '@testing-library/react-hooks'
-import useBoolean from '.'
+import useBoolean from './useBoolean'
 
 describe('useBoolean', () => {
 

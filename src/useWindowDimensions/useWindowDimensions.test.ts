@@ -1,5 +1,5 @@
 import { cleanup, renderHook } from '@testing-library/react-hooks'
-import useWindowDimensions from '.'
+import useWindowDimensions from './useWindowDimensions'
 
 describe('useWindowDimensions', () => {
 

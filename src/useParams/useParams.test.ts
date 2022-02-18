@@ -1,5 +1,5 @@
 import { cleanup, renderHook } from '@testing-library/react-hooks'
-import useParams from '.'
+import useParams from './useParams'
 
 describe('useParams', () => {
 

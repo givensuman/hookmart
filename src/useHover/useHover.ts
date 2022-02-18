@@ -17,7 +17,7 @@ const useHover = (
     }
 
     useEffect(() => {
-        if (!target.addEventListener) return
+        if (!target || !target.addEventListener) return
         target.addEventListener('mouseover', handleMouseOver)
         target.addEventListener('mouseout', handleMouseOut)
 

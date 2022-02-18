@@ -1,6 +1,6 @@
 import { act, cleanup, renderHook } from '@testing-library/react-hooks'
 import userEvent from '@testing-library/user-event'
-import useHover from '.'
+import useHover from './useHover'
 
 describe('useHover', () => {
 

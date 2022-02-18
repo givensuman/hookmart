@@ -1,5 +1,5 @@
 import {  cleanup, renderHook} from '@testing-library/react-hooks'
-import useInterval from '.'
+import useInterval from './useInterval'
 
 describe('useInterval', () => {
 

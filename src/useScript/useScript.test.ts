@@ -1,5 +1,5 @@
 import { cleanup, renderHook } from '@testing-library/react-hooks'
-import useScript from '.'
+import useScript from './useScript'
 
 describe('useScript', () => {
 

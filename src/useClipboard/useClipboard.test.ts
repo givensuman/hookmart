@@ -1,5 +1,5 @@
 import { act, cleanup, renderHook } from '@testing-library/react-hooks'
-import useClipboard from '.'
+import useClipboard from './useClipboard'
 
 describe('useClipboard', () => {
     

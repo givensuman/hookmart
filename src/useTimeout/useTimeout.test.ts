@@ -1,5 +1,5 @@
 import { act, cleanup, renderHook } from '@testing-library/react-hooks'
-import useTimeout from '.'
+import useTimeout from './useTimeout'
 
 describe('useTimeout()', () => {
 

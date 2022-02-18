@@ -1,6 +1,6 @@
 import { cleanup, renderHook } from '@testing-library/react-hooks'
 import fire from '@testing-library/user-event'
-import useEventListener from '.'
+import useEventListener from './useEventListener'
 
 describe('useEventListener', () => {
 
