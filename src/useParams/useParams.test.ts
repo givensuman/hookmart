@@ -23,7 +23,8 @@ describe('useParams', () => {
         const url = 'https://www.someurl.xyz/user?'
         const { result } = renderHook(() => useParams(url + new URLSearchParams(data).toString()))
 
-        expect(result.current).toStrictEqual(data)
+        expect(result.current).toMatchObject(data)
+        cleanup()
     })
 
 })

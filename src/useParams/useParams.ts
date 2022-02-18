@@ -5,27 +5,22 @@ type State = object | null
 const useParams = (
     url: URL['href'] = window.location.href
 ) => {
-    const [ params, setParams ] = useState<State>(null)
+    const [ params, setParams ] = useState<State>({})
 
     useEffect(() => {
-        let query: string =  new URL(url).search
+        let query: string = new URL(url).search
         const URLparams = new URLSearchParams(query)
-
-        for (const key of URLparams.keys()) {
+        
+        let obj = {}
+        for (let key of URLparams.keys()) {
             if (URLparams.getAll(key).length > 1) {
-                setParams({
-                    ...params,
-                    [key]: URLparams.getAll(key)
-                })
+                obj[key] = URLparams.getAll(key)
             } else {
-                setParams({
-                    ...params,
-                    [key]: URLparams.get(key)
-                })
+                obj[key] = URLparams.get(key)
             }
         }
+        setParams(obj)
     }, [url])
-    
     return params
 }
 
