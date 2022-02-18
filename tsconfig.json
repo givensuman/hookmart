@@ -19,6 +19,7 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
     "types": ["node", "jest"]
   },
   "include": ["src"],
