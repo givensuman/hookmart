@@ -213,7 +213,7 @@ const GrowShrink = () => {
         <div
         style={{
             height: grow ? '500px' : '250px',
-            width: 'auto',
+            width: grow ? '500px' : '250px',
             borderRadius: '50%',
             transition: 'height 1s, width 1s',
             backgroundColor: 'lavenderblush'
