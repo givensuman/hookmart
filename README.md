@@ -54,15 +54,15 @@ Example usage:
 
 ```js
 import React from 'react'
-import useBoolean from 'hookmart/useBoolean'
+import { useBoolean } from 'hookmart'
 
 const TrueOrFalse = () => {
     const { 
-        state as booleanState, setTrue, setFalse, toggle 
+        state, setTrue, setFalse, toggle 
     } = useBoolean(true)
     return (
         <>
-        {booleanState && <h1>Hi, mom! 👋</h1>}
+        {state && <h1>Hi, mom! 👋</h1>}
         <button onClick={setTrue}>Show</button>
         <button onClick={setFalse}>Hide</button>
         <button onClick={toggle}>Toggle</button>
@@ -82,7 +82,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useClipboard from 'hookmart/useClipboard'
+import { useClipboard } from 'hookmart'
 
 const CopyMe = () => {
     const [ text, copyText ] = useClipboard()
@@ -118,7 +118,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useEventListener from 'hookmart/useEventListener'
+import { useEventListener } from 'hookmart'
 
 const PokeyStick = () => {
     const ref = React.useRef()
@@ -148,7 +148,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useGeolocation from 'hookmart/useGeolocation'
+import { useGeolocation } from 'hookmart'
 
 const LatLong = () => {
     const coords = useGeolocation()
@@ -174,7 +174,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useHover from 'hookmart/useHover'
+import { useHover } from 'hookmart'
 
 const HoverHand = () => {
     const ref = React.useRef()
@@ -203,7 +203,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useInterval from 'hookmart/useInterval'
+import { useInterval } from 'hookmart'
 
 const GrowShrink = () => {
     const [ grow, setGrow ] = React.useState(false)
@@ -236,7 +236,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useLocalStorage from 'hookmart/useLocalStorage'
+import { useLocalStorage } from 'hookmart'
 
 const Theme = () => {
     const [ theme, setTheme ] = useLocalStorage('theme', 'light')
@@ -271,7 +271,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useOrientation from 'hookmart/useOrientation'
+import { useOrientation } from 'hookmart'
 
 const Somersault = () => {
     const orientation  = useOrientation()
@@ -291,13 +291,13 @@ const Somersault = () => {
 
 ### useParams
 
-Pulls query parameters from an optional supplied URL string. If one isn't supplied, it uses `window.location`.
+Pulls query parameters from an optional supplied URL string. If one isn't supplied, it uses `window.location.href`.
 
 Example usage:
 
 ```js
 import React from 'react'
-import useParams from 'hookmart/useParams'
+import { useParams } from 'hookmart'
 
 const HowDidIGetHere = () => {
     const params = useParams()
@@ -322,7 +322,7 @@ Adds a script to the `document` with the supplied `src` string. Returns a boolea
 
 ```js
 import React from 'react'
-import useScript from 'hookmart/useScript'
+import { useScript } from 'hookmart'
 
 const ForgotMyLines = () => {
     const loadingState = useScript(
@@ -346,13 +346,13 @@ const ForgotMyLines = () => {
 
 ### useTimeout
 
-Creates a `setTimeout` from the supplied callback and delay (in milliseconds). If no delay is provided, it defaults to 0 ms.
+Creates a `setTimeout` from the supplied callback and delay (in milliseconds). If no delay is provided, it defaults to 0.
 
 Example usage:
 
 ```js
 import React from 'react'
-import useTimeout from 'hookmart/useTimeout'
+import { useTimeout } from 'hookmart'
 
 const ComedicTiming = () => {
     useTimeout(() => alert('He was outstanding in his field!'), 1000)
@@ -374,7 +374,7 @@ Example usage:
 
 ```js
 import React from 'react'
-import useWindowDimensions from 'hookmart/useWindowDimensions'
+import { useWindowDimensions } from 'hookmart'
 
 const WhichIsBigger = () => {
     const { width, height } = useWindowDimensions()
