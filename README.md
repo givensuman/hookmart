@@ -125,7 +125,7 @@ const PokeyStick = () => {
     useEventListener(
         'click',
         () => alert('Ouch!'),
-        ref
+        ref.current
     )
 
     return (
@@ -179,7 +179,7 @@ import useHover from 'hookmart/useHover'
 const HoverHand = () => {
     const ref = React.useRef()
     const hoverState = useHover(
-        ref,
+        ref.current,
         () => alert('Glad you arrived!'),
         () => alert('Sorry to see you go.')
     )
@@ -276,9 +276,9 @@ import useOrientation from 'hookmart/useOrientation'
 const Somersault = () => {
     const orientation  = useOrientation()
 
-    if (orientation === ('landscape-primary' || 'landscape-secondary')) {
+    if (orientation.type === ('landscape-primary' || 'landscape-secondary')) {
         return <h1>What a beautiful landscape 🦋</h1>
-    } else if (orientation === ('portrait-primary' || 'portrait-secondary')) {
+    } else if (orientation.type === ('portrait-primary' || 'portrait-secondary')) {
         return <h1>WORLD STAR 💯</h1>
     } else {
         return <h1>What are you using, a smart fridge?</h1>
@@ -303,10 +303,12 @@ const HowDidIGetHere = () => {
     const params = useParams()
 
     return (
+        <>
         <h1>You passed these parameters 🦆:</h1>
         {Object.entries(params).map((item, index) => 
             <p key={index}>item[0] | item[1]</p>
         )}
+        </>
     )
 }
 ```
@@ -326,7 +328,7 @@ const ForgotMyLines = () => {
     const loadingState = useScript(
         'http://somescript/', 
         {
-            id: 'my-script'
+            id: 'my-script',
             async: true
         }
     )
@@ -353,7 +355,7 @@ import React from 'react'
 import useTimeout from 'hookmart/useTimeout'
 
 const ComedicTiming = () => {
-    useTimeout(() => alert('He was outstanding in his field!', 1000))
+    useTimeout(() => alert('He was outstanding in his field!'), 1000)
 
     return (
         <h1>Why did the scarecrow win an award? 🌽</h1>

@@ -1,2 +1,2 @@
-import useEventListener from './useEventListener'
-export default useEventListener
+export { default as useEventListener } from './useEventListener'
+export * from './useEventListener'

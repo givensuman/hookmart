@@ -1,2 +1,2 @@
-import useOrientation from './useOrientation'
-export default useOrientation
+export { default as useOrientation } from './useOrientation'
+export * from './useOrientation'

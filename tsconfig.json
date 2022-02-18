@@ -18,8 +18,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "types": ["node", "jest"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "rollup.config.js", "jest.config.js", "**/*.test.*"]
+  "exclude": ["node_modules", "dist", "jest.config.js", "**/*.test.*"]
 }

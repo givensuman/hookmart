@@ -1,2 +1,2 @@
-import useLocalStorage from './useLocalStorage'
-export default useLocalStorage
+export { default as useLocalStorage } from './useLocalStorage'
+export * from './useLocalStorage'

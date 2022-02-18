@@ -1,2 +1,2 @@
-import useHover from './useHover'
-export default useHover
+export { default as useHover } from './useHover'
+export * from './useHover'

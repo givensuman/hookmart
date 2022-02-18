@@ -1,2 +1,2 @@
-import useScript from './useScript'
-export default useScript
+export { default as useScript } from './useScript'
+export * from './useScript'

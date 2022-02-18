@@ -1,2 +1,2 @@
-import useClipboard from './useClipboard'
-export default useClipboard
+export { default as useClipboard } from './useClipboard'
+export * from './useClipboard'

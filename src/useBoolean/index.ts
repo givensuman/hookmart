@@ -1,2 +1,2 @@
-import useBoolean from './useBoolean'
-export default useBoolean
+export { default as useBoolean } from './useBoolean'
+export * from './useBoolean'

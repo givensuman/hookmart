@@ -1,2 +1,2 @@
-import useWindowDimensions from './useWindowDimensions'
-export default useWindowDimensions
+export { default as useWindowDimensions } from './useWindowDimensions'
+export * from './useWindowDimensions'
