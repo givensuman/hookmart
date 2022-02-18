@@ -11,8 +11,8 @@ const useOrientation = () => {
     useEffect(() => {
         const handleOrientation = () => setOrientation(window.screen.orientation)
 
-        window.screen.orientation.addEventListener('change', handleOrientation)
-        return () => window.screen.orientation.removeEventListener('change', handleOrientation)
+        window.screen.orientation.addEventListener('orientationchange', handleOrientation)
+        return () => window.screen.orientation.removeEventListener('orientationchange', handleOrientation)
     })
 
     return orientation
