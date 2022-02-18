@@ -306,7 +306,7 @@ const HowDidIGetHere = () => {
         <>
         <h1>You passed these parameters 🦆:</h1>
         {Object.entries(params).map((item, index) => 
-            <p key={index}>item[0] | item[1]</p>
+            <p key={index}>{item[0]} | {item[1]}</p>
         )}
         </>
     )
