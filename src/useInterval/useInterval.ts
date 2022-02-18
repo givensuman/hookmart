@@ -6,7 +6,9 @@ const useInterval = (
 ) => {
   const savedCallback = useRef<() => void>()
 
-  useEffect(() => savedCallback.current = callback, [callback])
+  useEffect(() => {
+    savedCallback.current = callback
+  }, [callback])
 
   useEffect(() => {
     const tick = () => {
