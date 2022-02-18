@@ -1,5 +1,5 @@
 import { cleanup, renderHook} from '@testing-library/react-hooks'
-import useGeolocation from '.'
+import useGeolocation from './useGeolocation'
 
 describe('useGeolocation', () => {
 
@@ -22,6 +22,7 @@ describe('useGeolocation', () => {
 
     test('should accept options', () => {
         renderHook(() => useGeolocation({ enableHighAccuracy: true }))
+        cleanup()
     })
 
     test('should fire geolocation functions', () => {
@@ -29,6 +30,7 @@ describe('useGeolocation', () => {
 
         expect(currentMock).toHaveBeenCalled()
         expect(watchMock).toHaveBeenCalled()
+        cleanup()
     })
 
 })
