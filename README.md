@@ -230,7 +230,7 @@ const GrowShrink = () => {
 
 ### useLocalStorage
 
-Returns an array with access to the state of a supplied localstorage key and a setter function to update it. Note that the state only tracks what is set to localstorage with the supplied setter function. Also takes an option initial value (default `null`) to use if there is no item at the supplied key.
+Returns an array with access to the state of a supplied localstorage key and a setter function to update it. Note that the state only tracks what is set to localstorage with the supplied setter function. Also takes an optional initial value (default `null`) to use if there is no item at the supplied key.
 
 Example usage:
 
@@ -319,6 +319,8 @@ const HowDidIGetHere = () => {
 ### useScript
 
 Adds a script to the `document` with the supplied `src` string. Returns a boolean loading state. Also accepts an optional object for options to attach to the script.
+  
+Example usage:
 
 ```js
 import React from 'react'
