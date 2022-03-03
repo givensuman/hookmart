@@ -76,7 +76,7 @@ const TrueOrFalse = () => {
 
 ### useClipboard
 
-Returns an array with the `clipboard` statea variable and a `copy` function that writes to clipboard. Note that the state only tracks what is copied with the supplied `copy` function.
+Returns an array with the `clipboard` state variable and a `copy` function that writes to clipboard. Note that the state only tracks what is copied with the supplied `copy` function.
 
 Example usage:
 
@@ -197,7 +197,7 @@ const HoverHand = () => {
 
 ### useInterval
 
-Creates an `setInterval` from the supplied callback and delay (in milliseconds).
+Creates a `setInterval` from the supplied callback and delay (in milliseconds).
 
 Example usage:
 
