@@ -7,7 +7,9 @@ const useEventListener = (
 ) => {
     const savedCallback = useRef(callback)
 
-    useEffect(() => savedCallback.current = callback, [callback])
+    useEffect(() => {
+        savedCallback.current = callback
+    }, [callback])
     
     useEffect(() => {
         if (!target.addEventListener) return
@@ -15,6 +17,7 @@ const useEventListener = (
         const listener = (e: Event) => savedCallback.current(e)
 
         target.addEventListener(eventType, listener)
+        
         return () => target.removeEventListener(eventType, listener)
     })
 }

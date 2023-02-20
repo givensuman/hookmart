@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const useGeolocation = (options: object = {}) => {
+const useGeolocation = (options: PositionOptions = {}) => {
     const [ data, setData ] = useState({})
 
     if (!navigator.geolocation) {
@@ -15,7 +15,8 @@ const useGeolocation = (options: object = {}) => {
             navigator.geolocation.getCurrentPosition(
                 callback,
                 err => console.error('Error getting geolocation.', err),
-                options)
+                options
+            )
         }
         catch (err) {
             console.error('Error getting geolocation.', err)
@@ -24,7 +25,9 @@ const useGeolocation = (options: object = {}) => {
         const watcher = navigator.geolocation.watchPosition(
             callback,
             err => console.error('Error watching geolocation.', err),
-            options)
+            options
+        )
+        
         return () => navigator.geolocation.clearWatch(watcher)
     }, [options])
 
