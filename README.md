@@ -1,5 +1,7 @@
 <h1 align='center'> 🦜 hookmart</h1>
 
+_Warning_: You probably don't need this library. If you're looking for third-party React hooks, check out the [ts-hooks](https://www.npmjs.com/package/usehooks-ts) first!
+
 hookmart is a collection of React hooks that have common use-cases.
 
 Each hook is lightweight and tested, and the library is entirely tree-shakeable.
@@ -7,10 +9,12 @@ Each hook is lightweight and tested, and the library is entirely tree-shakeable.
 To install, run:
 
 ```bash
-#npm
+# npm
 npm i --save hookmart
-#or, with yarn
+# or, with yarn
 yarn add hookmart
+# or, better yet, with pnpm
+pnpm i hookmart
 ```
 
 <hr>
@@ -90,17 +94,19 @@ const CopyMe = () => {
     
     return (
         <>
-        <input 
-        type='text'
-        value={input}
-        onChange={e => setInput(e.target.value)}
-        />
-        <button onClick={() => {
-            copyText(input)
-            alert(`You got busted for trying to cheat. ${text} isn't even the right answer.`)
-        }}>
-            Pssst... copy me! 📝
-        </button>
+            <input 
+                type='text'
+                value={input}
+                onChange={e => setInput(e.target.value)}
+            />
+            <button 
+                onClick={() => {
+                    copyText(input)
+                    alert('Busted!')
+                }}
+            >
+                Pssst... copy me! 📝
+            </button>
         </>
     )
 }
@@ -155,9 +161,9 @@ const LatLong = () => {
 
     return (
         <>
-        <h1>I know where you live! 🌐</h1>
-        <p>Latitude: {coords?.latitude}</p>
-        <p>Longitude: {coords?.longitude}</p>
+            <h1>I know where you live!</h1>
+            <p>Latitude: {coords?.latitude}</p>
+            <p>Longitude: {coords?.longitude}</p>
         </>
     )
 }
@@ -211,13 +217,13 @@ const GrowShrink = () => {
 
     return (
         <div
-        style={{
-            height: grow ? '500px' : '250px',
-            width: grow ? '500px' : '250px',
-            borderRadius: '50%',
-            transition: 'height 1s, width 1s',
-            backgroundColor: 'lavenderblush'
-        }}
+            style={{
+                height: grow ? '500px' : '250px',
+                width: grow ? '500px' : '250px',
+                borderRadius: '50%',
+                transition: 'height 1s, width 1s',
+                backgroundColor: 'lavenderblush'
+            }}
         >
             {grow ? '🖐' : '🤏'}
         </div>
@@ -244,14 +250,14 @@ const Theme = () => {
     return (
         <div className={theme}>
             <button
-            disabled={theme === 'light'}
-            onClick={() => setTheme('light')}
+                disabled={theme === 'light'}
+                onClick={() => setTheme('light')}
             >
                 Light theme 🌻
             </button>
             <button
-            disabled={theme === 'dark'}
-            onClick={() => setTheme('dark')}
+                disabled={theme === 'dark'}
+                onClick={() => setTheme('dark')}
             >
                 Dark theme 🦇
             </button>
@@ -304,10 +310,10 @@ const HowDidIGetHere = () => {
 
     return (
         <>
-        <h1>You passed these parameters 🦆:</h1>
-        {Object.entries(params).map((item, index) => 
-            <p key={index}>{item[0]} | {item[1]}</p>
-        )}
+            <h1>You passed these parameters 🦆:</h1>
+            {Object.entries(params).map((item, index) => 
+                <p key={index}>{item[0]} | {item[1]}</p>
+            )}
         </>
     )
 }
