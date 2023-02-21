@@ -37,8 +37,6 @@ pnpm i hookmart
 
 - <a href='#useParams'>`useParams`</a>
 
-- <a href='#useScript'>`useScript`</a>
-
 - <a href='#useTimeout'>`useTimeout`</a>
 
 - <a href='#useWindowDimensions'>`useWindowDimensions`</a>
@@ -315,36 +313,6 @@ const HowDidIGetHere = () => {
                 <p key={index}>{item[0]} | {item[1]}</p>
             )}
         </>
-    )
-}
-```
-</div>
-
-<div id='useScript'>
-
-### useScript
-
-Adds a script to the `document` with the supplied `src` string. Returns a boolean loading state. Also accepts an optional object for options to attach to the script.
-  
-Example usage:
-
-```js
-import React from 'react'
-import { useScript } from 'hookmart'
-
-const ForgotMyLines = () => {
-    const loadingState = useScript(
-        'http://somescript/', 
-        {
-            id: 'my-script',
-            async: true
-        }
-    )
-
-    return (
-        <h1>
-            {loadingState ? 'Done! ✅' : 'Working on it... 😰'}
-        </h1>
     )
 }
 ```

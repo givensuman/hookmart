@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-type State = object | null
+type State = object
 
 const useParams = (
     url: URL['href'] = window.location.href
@@ -11,7 +11,9 @@ const useParams = (
         let query: string = new URL(url).search
         const URLparams = new URLSearchParams(query)
         
-        let obj = {}
+        let obj: {
+            [key: string]: any
+        } = {}
         for (let key of URLparams.keys()) {
             if (URLparams.getAll(key).length > 1) {
                 obj[key] = URLparams.getAll(key)
@@ -21,6 +23,7 @@ const useParams = (
         }
         setParams(obj)
     }, [url])
+    
     return params
 }
 
