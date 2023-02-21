@@ -1,10 +1,17 @@
 <h1 align='center'> 🦜 hookmart</h1>
 
-_Warning_: You probably don't need this library. If you're looking for third-party React hooks, check out the [ts-hooks](https://www.npmjs.com/package/usehooks-ts) first!
+---
+<div align='center'>
+<img src='https://img.shields.io/github/languages/code-size/givensuman/hookmart' alt='code size' /> 
+&nbsp;
+&nbsp;
+<img src='https://img.shields.io/badge/build-passing-success' alt='passing' />
+</div>
+<br />
 
-hookmart is a collection of React hooks that have common use-cases.
+_Warning_: You probably don't need this library. If you're looking for third-party React hooks, check out the [ts-hooks](https://www.npmjs.com/package/usehooks-ts) library first!
 
-Each hook is lightweight and tested, and the library is entirely tree-shakeable.
+hookmart is a collection of React hooks that have common use-cases. Each hook is lightweight and tested.
 
 To install, run:
 
@@ -20,6 +27,8 @@ pnpm i hookmart
 <hr>
 
 ### Contents:
+
+<ol>
 
 - <a href='#useBoolean'>`useBoolean`</a>
 
@@ -64,10 +73,10 @@ const TrueOrFalse = () => {
     } = useBoolean(true)
     return (
         <>
-        {state && <h1>Hi, mom! 👋</h1>}
-        <button onClick={setTrue}>Show</button>
-        <button onClick={setFalse}>Hide</button>
-        <button onClick={toggle}>Toggle</button>
+            {state && <h1>Hi, mom! 👋</h1>}
+            <button onClick={setTrue}>Show</button>
+            <button onClick={setFalse}>Hide</button>
+            <button onClick={toggle}>Toggle</button>
         </>
     )
 }
@@ -309,9 +318,9 @@ const HowDidIGetHere = () => {
     return (
         <>
             <h1>You passed these parameters 🦆:</h1>
-            {Object.entries(params).map((item, index) => 
+            {Object.entries(params).map((item, index) => (
                 <p key={index}>{item[0]} | {item[1]}</p>
-            )}
+            ))}
         </>
     )
 }
@@ -365,3 +374,5 @@ const WhichIsBigger = () => {
 }
 ```
 </div>
+
+<br />
