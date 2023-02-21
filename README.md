@@ -1,6 +1,6 @@
 <h1 align='center'> 🦜 hookmart</h1>
 
-_Warning_: You probably don't need this library. If you're looking for third-party React hooks, check out the [ts-hooks](https://www.npmjs.com/package/usehooks-ts) first!
+_Warning_: You probably don't need this library. If you're looking for third-party React hooks, check out the [ts-hooks](https://www.npmjs.com/package/usehooks-ts) library first!
 
 hookmart is a collection of React hooks that have common use-cases.
 
